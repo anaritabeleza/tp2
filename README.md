@@ -15,25 +15,25 @@ tp2/
 ├── .env.example              # Template de variáveis de ambiente
 ├── evaluate.py               # Harness de avaliação das métricas do sistema
 ├── data/
-│   ├── images/               # Dataset de imagens de trabalho da loja
-│   ├── inspections/          # Registos JSON históricos das inspeções efetuadas
-│   └── rules/                # Configurações JSON das regras de negócio persistidas
+│   ├── images/               # Dataset de imagens de trabalho da loja (500 imagens)
+│   ├── inspections/          # Registos JSON históricos de inspeções arquivados
+│   └── rules/                # Configurações JSON das regras de negócio ativas
 ├── src/
 │   ├── shelf_inspector.py    # Componente 1: análise visual com Gemini (3 estratégias)
 │   ├── rule_engine.py        # Componente 2: conversão e execução de regras
-│   ├── rag_memory.py         # Componente 3: vector store RAG com ChromaDB
-│   ├── report_generator.py   # Componente 4: gerador de relatórios Markdown
-│   └── interface.py          # Componente 5: interface conversacional (Chat) e CLI
+│   ├── rag_memory.py         # Componente 3: base de dados vetorial RAG (ChromaDB)
+│   ├── report_generator.py   # Componente 4: fusão de dados e relatórios Markdown
+│   └── interface.py          # Componente 5: interface de Chat e consola CLI
 ├── prompts/
 │   ├── prompt_strat_a.txt    # Prompt Estratégia A (Zero-shot)
 │   ├── prompt_strat_b.txt    # Prompt Estratégia B (Chain-of-Thought visual)
 │   ├── prompt_strat_c.txt    # Prompt Estratégia C (Few-shot)
 │   ├── prompt_rule_engine.txt# Prompt do motor de regras (tradução e ambiguidades)
-│   ├── prompt_rag_summary.txt # Prompt do gerador de resumos ricos para RAG
-│   ├── prompt_rag_synthesis.txt # Prompt de resposta sintética RAG
+│   ├── prompt_rag_summary.txt # Prompt para resumos semânticos RAG
+│   ├── prompt_rag_synthesis.txt # Prompt de síntese de resposta RAG
 │   └── prompt_llm_judge.txt  # Prompt do avaliador LLM-as-judge
-├── vectorstore/              # ChromaDB persistente (criado em runtime)
-└── cache/                    # Cache local de resultados da API (MD5 da imagem)
+├── vectorstore/              # ChromaDB persistente com os embeddings locais
+└── cache/                    # Cache local de assinaturas MD5 para evitar chamadas à API
 ```
 
 ---
@@ -65,13 +65,6 @@ Certifique-se de que tem o Python instalado (recomendado >= 3.9).
    ```env
    GEMINI_API_KEY=AIzaSyYourGeminiApiKeyHere
    ```
-
-4. **Preparar o Dataset:**
-   Para inicializar o diretório de dados e gerar as imagens de teste/ground truth necessárias para o funcionamento e avaliação local, execute:
-   ```bash
-   python data/prepare_dataset.py
-   ```
-
 ---
 
 ## 🚀 Como Utilizar a Interface do Gestor
@@ -174,3 +167,20 @@ Para evitar custos e lidar com o limite gratuito de 15 chamadas/minuto:
 - **Cache Local:** Toda a imagem inspecionada é convertida em MD5 e o seu resultado JSON é guardado em disco. Se a mesma imagem for analisada de novo, o resultado é instantaneamente carregado de `cache/`.
 - **Rate Limiting:** Implementado um wrapper com backoff exponencial e jitter (aleatoriedade) para erros 429.
 - **Fallback Gracioso:** Em caso de perda de internet ou limite diário de API excedido, o sistema lê resultados compatíveis da cache e alerta de forma amigável o utilizador sem interromper o fluxo da aplicação.
+
+---
+
+## 📝 Relatório Académico e Autoria
+
+### Relatório em LaTeX (Overleaf)
+A documentação científica oficial do projeto encontra-se redigida no ficheiro [`relatorio_tp2.tex`](./relatorio_tp2.tex) (localizado na raiz do repositório). Este ficheiro foi desenhado para ser colado e compilado diretamente no **Overleaf** e cumpre os seguintes requisitos:
+*   **Formato:** Artigo de 2 colunas estilo IEEE (`IEEEtran`).
+*   **Estética Avançada:** Utilização de caixas de destaque coloridas com cantos arredondados (`tcolorbox`), tabelas científicas com linhas alternadas sombreadas (`colortbl` / `booktabs`) e micro-tipografia avançada (`microtype`).
+*   **Parsing Resiliente:** Mapeamento integrado de caracteres acentuados portugueses em listings (`literate`), prevenindo erros de compilação de codificação UTF-8 no Overleaf.
+
+### Autoria
+*   **Autora:** Rita Alves
+*   **Instituição:** Universidade da Beira Interior (UBI), Covilhã, Portugal
+*   **Curso:** Mestrado em Inteligência Artificial e Ciência de Dados (LIACD)
+*   **E-mail:** [Rita.Alves@ubi.pt](mailto:Rita.Alves@ubi.pt)
+
