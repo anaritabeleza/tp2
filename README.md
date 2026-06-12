@@ -13,13 +13,11 @@ tp2/
 ├── README.md                 # Este ficheiro com documentação geral
 ├── requirements.txt          # Dependências do projeto Python
 ├── .env.example              # Template de variáveis de ambiente
-├── .env                      # Variáveis de ambiente reais (não comitado)
 ├── evaluate.py               # Harness de avaliação das métricas do sistema
 ├── data/
 │   ├── images/               # Dataset de imagens de trabalho da loja
 │   ├── inspections/          # Registos JSON históricos das inspeções efetuadas
-│   ├── rules/                # Configurações JSON das regras de negócio persistidas
-│   └── prepare_dataset.py    # Script de preparação das imagens e do ground truth
+│   └── rules/                # Configurações JSON das regras de negócio persistidas
 ├── src/
 │   ├── shelf_inspector.py    # Componente 1: análise visual com Gemini (3 estratégias)
 │   ├── rule_engine.py        # Componente 2: conversão e execução de regras
