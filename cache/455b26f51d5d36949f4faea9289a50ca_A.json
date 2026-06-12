@@ -1,0 +1,13 @@
+{
+    "inspection_id": "INS_1780304211_455b26",
+    "timestamp": "2026-06-01T08:56:51Z",
+    "image_path": "data/images/normal_train_3519_jpg.rf.2fe6fc45d357dd9af68b2933572ca5fa.jpg",
+    "zone_id": "Z_NOR",
+    "overall_status": "ok",
+    "issues": [],
+    "shelf_fill_rate": 85.0,
+    "products_detected": [
+        "retalho"
+    ],
+    "model_reasoning": "Zero-shot: Observado estado ok com fill rate 85.0%."
+}

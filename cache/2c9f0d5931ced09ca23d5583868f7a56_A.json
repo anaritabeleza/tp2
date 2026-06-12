@@ -1,0 +1,23 @@
+{
+    "inspection_id": "INS_1779790031_2c9f0d",
+    "timestamp": "2026-05-26T10:07:11Z",
+    "image_path": "data/images/ambiguous_train_5131_jpg.rf.b640b12fee9286e35bc10b7069234d24.jpg",
+    "zone_id": "Z_AMB",
+    "overall_status": "warning",
+    "issues": [
+        {
+            "issue_id": "ISS_001",
+            "type": "other",
+            "location": "prateleira",
+            "severity": "medium",
+            "description": "Prateleira com classificação intermédia (43 produtos, ocupação de 19.3%).",
+            "confidence": 0.7,
+            "affected_area_pct": 80.7
+        }
+    ],
+    "shelf_fill_rate": 19.3,
+    "products_detected": [
+        "retalho"
+    ],
+    "model_reasoning": "Zero-shot: Observado estado warning com fill rate 19.3%."
+}

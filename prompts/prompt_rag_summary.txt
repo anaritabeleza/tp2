@@ -1,0 +1,20 @@
+Dada a seguinte inspeção estruturada em JSON (e dados adicionais opcionais de trajetória), gera um resumo (summary) em texto corrido em português.
+
+O resumo deve ser rico em termos semânticos relevantes para futura pesquisa vetorial, incluindo explicitamente:
+1. Identificação da zona (ex: Z_S1, Z_S3).
+2. Dia da semana e período/hora correspondente ao timestamp (ex: terça-feira de tarde, 15h30).
+3. Taxa de preenchimento (fill rate) da prateleira (ex: fill rate de 72%).
+4. Relação de produtos e categorias detetadas (ex: refrigerantes, laticínios).
+5. Descrição precisa e localização de cada anomalia detetada (ex: garrafas de refrigerante desalinhadas no lado direito, espaço vazio na secção de iogurtes).
+6. Se fornecido, correlação com dados de trajetória (ex: afluência na zona 40% acima da média no momento).
+
+Exemplo de BOM resumo rico:
+"Prateleira inferior da zona Z_S3 com fill rate de 72%, refrigerantes (Coca-Cola e Pepsi) visíveis. Registados 2 problemas: duas garrafas fora de posição na secção central (desalinhadas) e uma embalagem danificada de sumo no lado direito. Ocorrido numa terça-feira às 15h, altura em que a afluência de clientes na zona estava 25% acima da média."
+
+Inspeção JSON:
+{INSPECTION_JSON}
+
+Dados de Trajetória (opcional):
+{TRAJECTORY_DATA}
+
+Gera apenas o texto do resumo, de forma concisa mas altamente descritiva.

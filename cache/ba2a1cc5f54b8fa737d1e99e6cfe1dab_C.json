@@ -1,0 +1,23 @@
+{
+    "inspection_id": "INS_1779889561_ba2a1c",
+    "timestamp": "2026-05-27T13:46:01Z",
+    "image_path": "data/images/dirty_disorganized_test_1718_jpg.rf.3bfa02a6493caba25dac71717d6a75e1.jpg",
+    "zone_id": "Z_DIR",
+    "overall_status": "warning",
+    "issues": [
+        {
+            "issue_id": "ISS_001",
+            "type": "misaligned",
+            "location": "prateleira",
+            "severity": "medium",
+            "description": "Prateleira desordenada/muito cheia (150 produtos, ocupação densa de 44.8%).",
+            "confidence": 0.8,
+            "affected_area_pct": 15.0
+        }
+    ],
+    "shelf_fill_rate": 85.0,
+    "products_detected": [
+        "retalho"
+    ],
+    "model_reasoning": "Few-shot: Análise contextual baseada em exemplos anteriores. Detetados problemas: Prateleira desordenada/muito cheia (150 produtos, ocupação densa de 44.8%).."
+}

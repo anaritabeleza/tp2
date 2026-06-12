@@ -1,0 +1,36 @@
+{
+    "rule_id": "RULE_1780612401",
+    "created_at": "2026-06-04T22:33:11Z",
+    "natural_language": "Avisa-me quando a prateleira estiver vazia.",
+    "description": "Gerar um alerta quando uma prateleira for detectada como vazia.",
+    "conditions": {
+        "zone_filter": [
+            "any"
+        ],
+        "time_filter": {
+            "hours_start": 0,
+            "hours_end": 23
+        },
+        "issue_types": [
+            "empty_shelf"
+        ],
+        "severity_threshold": "high",
+        "fill_rate_threshold": 0.0,
+        "location_filter": "any"
+    },
+    "action": {
+        "alert_level": "warning",
+        "notification_message": "Alerta: Prateleira vazia detectada na {zone} na localização {location}. Por favor, verifique e reponha."
+    },
+    "validation": {
+        "is_valid": true,
+        "ambiguities": [],
+        "assumptions": [
+            "Zone filter is set to 'any' as no specific zone was mentioned.",
+            "Time filter is set to '0-23' (all day) as no specific time was mentioned.",
+            "Severity threshold for an empty shelf is assumed to be 'high'.",
+            "Location filter is set to 'any' as no specific shelf location (bottom, middle, top) was mentioned.",
+            "Alert level for 'Avisa-me' is assumed to be 'warning' for an empty shelf."
+        ]
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "inspection_id": "INS_EVAL_001",
+  "timestamp": "2026-06-01T10:00:00Z",
+  "zone_id": "Z_S1",
+  "shelf_fill_rate": 0.35,
+  "overall_status": "critical",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "inferior",
+      "severity": "high",
+      "description": "Prateleira vazia de laticínios"
+    }
+  ],
+  "summary": "Resumo da Inspeção INS_EVAL_001 na Zona Z_S1. Estado Geral: critical. Taxa de Ocupação: 35.0%. Problemas detetados: empty_shelf: Prateleira vazia de laticínios"
+}

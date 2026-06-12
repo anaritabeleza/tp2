@@ -1,0 +1,23 @@
+{
+    "inspection_id": "INS_1779800327_a99d7b",
+    "timestamp": "2026-05-26T12:58:47Z",
+    "image_path": "data/images/ambiguous_test_2249_jpg.rf.6e098db1d0050c3f3129241b18f7115b.jpg",
+    "zone_id": "Z_AMB",
+    "overall_status": "warning",
+    "issues": [
+        {
+            "issue_id": "ISS_001",
+            "type": "other",
+            "location": "prateleira",
+            "severity": "medium",
+            "description": "Preenchimento de quota / fallback automático",
+            "confidence": 1.0,
+            "affected_area_pct": 15.0
+        }
+    ],
+    "shelf_fill_rate": 85.0,
+    "products_detected": [
+        "retalho"
+    ],
+    "model_reasoning": "Few-shot: Análise contextual baseada em exemplos anteriores. Detetados problemas: Preenchimento de quota / fallback automático."
+}

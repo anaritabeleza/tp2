@@ -1,0 +1,23 @@
+{
+    "inspection_id": "INS_1780043519_118443",
+    "timestamp": "2026-05-29T08:31:59Z",
+    "image_path": "data/images/empty_shelf_test_2229_jpg.rf.ebf94e44c504505d55b64c483a72e892.jpg",
+    "zone_id": "Z_EMP",
+    "overall_status": "warning",
+    "issues": [
+        {
+            "issue_id": "ISS_001",
+            "type": "empty_shelf",
+            "location": "prateleira",
+            "severity": "medium",
+            "description": "Prateleira parcialmente vazia (62 produtos, ocupação de 8.4%).",
+            "confidence": 0.9,
+            "affected_area_pct": 91.6
+        }
+    ],
+    "shelf_fill_rate": 8.4,
+    "products_detected": [
+        "retalho"
+    ],
+    "model_reasoning": "Zero-shot: Observado estado warning com fill rate 8.4%."
+}

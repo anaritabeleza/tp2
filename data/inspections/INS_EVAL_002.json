@@ -1,0 +1,9 @@
+{
+  "inspection_id": "INS_EVAL_002",
+  "timestamp": "2026-06-02T15:00:00Z",
+  "zone_id": "Z_S3",
+  "shelf_fill_rate": 0.9,
+  "overall_status": "ok",
+  "issues": [],
+  "summary": "Resumo da Inspeção INS_EVAL_002 na Zona Z_S3. Estado Geral: ok. Taxa de Ocupação: 90.0%. Problemas detetados: Nenhuma anomalia detetada."
+}

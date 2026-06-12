@@ -1,0 +1,23 @@
+{
+    "inspection_id": "INS_1779788346_137653",
+    "timestamp": "2026-05-26T09:39:06Z",
+    "image_path": "data/images/ambiguous_train_3466_jpg.rf.632fa3409eb1d21e774d1ffd262b210a.jpg",
+    "zone_id": "Z_AMB",
+    "overall_status": "warning",
+    "issues": [
+        {
+            "issue_id": "ISS_001",
+            "type": "other",
+            "location": "prateleira",
+            "severity": "medium",
+            "description": "Preenchimento de quota / fallback automático",
+            "confidence": 1.0,
+            "affected_area_pct": 15.0
+        }
+    ],
+    "shelf_fill_rate": 85.0,
+    "products_detected": [
+        "retalho"
+    ],
+    "model_reasoning": "Zero-shot: Observado estado warning com fill rate 85.0%."
+}

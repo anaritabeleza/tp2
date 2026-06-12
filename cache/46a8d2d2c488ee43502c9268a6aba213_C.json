@@ -1,0 +1,13 @@
+{
+    "inspection_id": "INS_1780237279_46a8d2",
+    "timestamp": "2026-05-31T14:21:19Z",
+    "image_path": "data/images/normal_test_974_jpg.rf.79616b1df90295bc2b6f4f87974b93af.jpg",
+    "zone_id": "Z_NOR",
+    "overall_status": "ok",
+    "issues": [],
+    "shelf_fill_rate": 26.5,
+    "products_detected": [
+        "retalho"
+    ],
+    "model_reasoning": "Few-shot: Análise contextual baseada em exemplos anteriores. Detetados problemas: Prateleira organizada com stock correto (20 produtos, ocupação equilibrada de 26.5%).."
+}

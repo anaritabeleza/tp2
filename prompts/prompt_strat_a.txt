@@ -1,0 +1,34 @@
+Analisa esta imagem de uma prateleira de supermercado (retalho) e fornece uma análise estruturada estritamente no formato JSON abaixo.
+
+A tua resposta deve ser apenas o objeto JSON válido, sem qualquer formatação em markdown (como ```json) ou texto adicional fora do JSON.
+
+Aqui está o schema JSON que deves seguir:
+{
+  "inspection_id": "INS_XXXXX",
+  "timestamp": "ISO_TIMESTAMP",
+  "image_path": "IMAGE_PATH",
+  "zone_id": "ZONE_ID",
+  "overall_status": "ok|warning|critical",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf|wrong_product|damaged|misaligned|label_missing|other",
+      "location": "Localização detalhada na prateleira",
+      "severity": "low|medium|high",
+      "description": "Descrição em português do problema detetado",
+      "confidence": 0.95,
+      "affected_area_pct": 15.0
+    }
+  ],
+  "shelf_fill_rate": 0.85,
+  "products_detected": ["categoria1", "categoria2"],
+  "model_reasoning": "Breve justificação da classificação"
+}
+
+Instruções para os campos:
+1. `inspection_id`, `timestamp`, `image_path` e `zone_id` ser-te-ão fornecidos ou deves preencher com dados coerentes.
+2. `overall_status`: 'ok' se não houver problemas, 'warning' se houver problemas de severidade baixa/média ou taxa de preenchimento (fill rate) entre 50% e 80%, 'critical' se houver problemas de severidade alta ou taxa de preenchimento abaixo de 50%.
+3. `issues`: lista de anomalias encontradas. Se não houver problemas, deixa a lista vazia [].
+4. `shelf_fill_rate`: número entre 0.0 (totalmente vazia) e 1.0 (totalmente cheia).
+5. `products_detected`: lista de categorias ou nomes de produtos detetados na prateleira (ex: "laticínios", "refrigerantes", "bolachas", "detergentes", etc.).
+6. `model_reasoning`: justificação de como chegaste a estas conclusões.

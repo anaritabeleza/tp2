@@ -1,0 +1,13 @@
+{
+    "inspection_id": "INS_1780229844_221f18",
+    "timestamp": "2026-05-31T12:17:24Z",
+    "image_path": "data/images/normal_train_2066_jpg.rf.7c4c0eed7d7efd804053d92c48e33ce2.jpg",
+    "zone_id": "Z_NOR",
+    "overall_status": "ok",
+    "issues": [],
+    "shelf_fill_rate": 85.0,
+    "products_detected": [
+        "retalho"
+    ],
+    "model_reasoning": "CoT Visual: 1. Descrição: Prateleira de normal. 2. Identificação: Preenchimento de quota / fallback automático. 3. Classificação: normal. 4. Conclusão: Status ok."
+}

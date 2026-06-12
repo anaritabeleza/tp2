@@ -1,0 +1,13 @@
+{
+    "inspection_id": "INS_1780233238_4246b1",
+    "timestamp": "2026-05-31T13:13:58Z",
+    "image_path": "data/images/normal_test_1780_jpg.rf.61be96cc19804a32072968ca4058806a.jpg",
+    "zone_id": "Z_NOR",
+    "overall_status": "ok",
+    "issues": [],
+    "shelf_fill_rate": 85.0,
+    "products_detected": [
+        "retalho"
+    ],
+    "model_reasoning": "Few-shot: Análise contextual baseada em exemplos anteriores. Detetados problemas: Preenchimento de quota / fallback automático."
+}

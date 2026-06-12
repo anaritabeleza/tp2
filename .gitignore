@@ -1,0 +1,28 @@
+# Virtual Environment
+.venv/
+venv/
+env/
+ENV/
+
+# Python Cache & Compiled
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Configurações e Segredos
+.env
+.env.local
+.env.*.local
+
+# Imagens de Teste Locais
+test_images/
+
+# IDEs e Ficheiros do Sistema Operativo
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.suo

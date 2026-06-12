@@ -1,0 +1,17 @@
+{
+  "inspection_id": "INS_EVAL_003",
+  "timestamp": "2026-06-03T18:00:00Z",
+  "zone_id": "Z_S1",
+  "shelf_fill_rate": 0.8,
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "superior",
+      "severity": "low",
+      "description": "Iogurtes desalinhados"
+    }
+  ],
+  "summary": "Resumo da Inspeção INS_EVAL_003 na Zona Z_S1. Estado Geral: warning. Taxa de Ocupação: 80.0%. Problemas detetados: misaligned: Iogurtes desalinhados"
+}

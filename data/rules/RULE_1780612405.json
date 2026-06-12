@@ -1,0 +1,35 @@
+{
+    "rule_id": "RULE_1780612405",
+    "created_at": "2026-06-04T22:33:21Z",
+    "natural_language": "Na zona Z_S3, avisa com criticidade alta se houver produtos danificados ou tombados.",
+    "description": "Gerar um alerta de criticidade alta se forem detectados produtos danificados ou tombados na zona Z_S3.",
+    "conditions": {
+        "zone_filter": [
+            "Z_S3"
+        ],
+        "time_filter": {
+            "hours_start": 0,
+            "hours_end": 23
+        },
+        "issue_types": [
+            "damaged",
+            "misaligned"
+        ],
+        "severity_threshold": "high",
+        "fill_rate_threshold": 0.0,
+        "location_filter": "any"
+    },
+    "action": {
+        "alert_level": "critical",
+        "notification_message": "Alerta CRÍTICO: Produtos {issue_types} detectados na zona {zone_filter}."
+    },
+    "validation": {
+        "is_valid": true,
+        "ambiguities": [],
+        "assumptions": [
+            "A palavra 'tombados' foi interpretada como 'misaligned' (desalinhados).",
+            "O 'severity_threshold' foi definido como 'high' com base na 'criticidade alta' do alerta.",
+            "Valores padrão para 'time_filter', 'fill_rate_threshold' e 'location_filter' foram utilizados por não terem sido especificados."
+        ]
+    }
+}

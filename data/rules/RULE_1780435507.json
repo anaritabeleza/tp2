@@ -1,0 +1,37 @@
+{
+    "rule_id": "RULE_1780435507",
+    "created_at": "2026-06-02T21:25:00Z",
+    "natural_language": "Na zona Z_S3, avisa com criticidade alta se houver produtos danificados ou tombados.",
+    "description": "Criar uma regra para alertar com nível de criticidade 'crítico' quando forem detectados produtos danificados ou desalinhados (tombados) na zona Z_S3, independentemente da sua localização na prateleira ou taxa de preenchimento.",
+    "conditions": {
+        "zone_filter": [
+            "Z_S3"
+        ],
+        "time_filter": {
+            "hours_start": 0,
+            "hours_end": 23
+        },
+        "issue_types": [
+            "damaged",
+            "misaligned"
+        ],
+        "severity_threshold": "low",
+        "fill_rate_threshold": 0.0,
+        "location_filter": "any"
+    },
+    "action": {
+        "alert_level": "critical",
+        "notification_message": "Alerta crítico: Produtos danificados ou desalinhados detectados na zona {zone_id}."
+    },
+    "validation": {
+        "is_valid": true,
+        "ambiguities": [],
+        "assumptions": [
+            "A condição 'tombados' foi mapeada para o tipo de problema 'misaligned'.",
+            "A severidade do problema (severity_threshold) foi definida como 'low', significando que qualquer ocorrência dos tipos de problema especificados irá disparar a regra.",
+            "O filtro de tempo (time_filter) foi definido para o dia inteiro (0-23 horas).",
+            "O filtro de taxa de preenchimento (fill_rate_threshold) foi definido como 0.0, significando que a regra não depende da taxa de preenchimento.",
+            "O filtro de localização (location_filter) foi definido como 'any', significando que a regra se aplica a qualquer localização na prateleira."
+        ]
+    }
+}

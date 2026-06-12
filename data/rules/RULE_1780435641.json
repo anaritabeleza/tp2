@@ -1,0 +1,34 @@
+{
+    "rule_id": "RULE_1780435641",
+    "created_at": "2026-06-02T21:27:17Z",
+    "natural_language": "Quero ser alertado se a prateleira de baixo na zona Z_S1 tiver fill rate abaixo de 50%",
+    "description": "Alertar se o fill rate da prateleira de baixo na zona Z_S1 for inferior a 50%.",
+    "conditions": {
+        "zone_filter": [
+            "Z_S1"
+        ],
+        "time_filter": {
+            "hours_start": 0,
+            "hours_end": 23
+        },
+        "issue_types": [
+            "empty_shelf"
+        ],
+        "severity_threshold": null,
+        "fill_rate_threshold": 0.5,
+        "location_filter": "bottom"
+    },
+    "action": {
+        "alert_level": "warning",
+        "notification_message": "Alerta: O fill rate da prateleira de baixo na zona {{zone_id}} está abaixo de 50% ({{current_fill_rate}}%). Ação necessária."
+    },
+    "validation": {
+        "is_valid": true,
+        "ambiguities": [],
+        "assumptions": [
+            "O alerta deve ser de nível 'warning'.",
+            "O filtro de tempo é para todas as horas do dia (0-23).",
+            "O tipo de problema principal é 'empty_shelf' devido ao baixo fill rate."
+        ]
+    }
+}

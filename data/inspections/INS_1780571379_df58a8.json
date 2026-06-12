@@ -1,0 +1,23 @@
+{
+    "inspection_id": "INS_1780571379_df58a8",
+    "timestamp": "2026-06-04T11:09:39Z",
+    "image_path": "data/images/planogram_violation_train_5053_jpg.rf.aa5be77970aa6831b5908d36a64f7f97.jpg",
+    "zone_id": "Z_PLA",
+    "overall_status": "warning",
+    "issues": [
+        {
+            "issue_id": "ISS_001",
+            "type": "wrong_product",
+            "location": "prateleira",
+            "severity": "medium",
+            "description": "Violação de planograma detetada: 3 produtos tombados de lado.",
+            "confidence": 0.85,
+            "affected_area_pct": 15.0
+        }
+    ],
+    "shelf_fill_rate": 85.0,
+    "products_detected": [
+        "retalho"
+    ],
+    "model_reasoning": "CoT Visual: 1. Descrição: Prateleira de planogram. 2. Identificação: Violação de planograma detetada: 3 produtos tombados de lado.. 3. Classificação: planogram_violation. 4. Conclusão: Status warning."
+}

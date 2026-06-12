@@ -1,0 +1,35 @@
+{
+    "rule_id": "RULE_1780614870",
+    "created_at": "2026-06-04T23:14:24Z",
+    "natural_language": "Avisa-me quando a prateleira estiver vazia.",
+    "description": "Enviar uma notificação de alerta quando o nível de preenchimento de qualquer prateleira for igual a 0% (vazia).",
+    "conditions": {
+        "zone_filter": [
+            "any"
+        ],
+        "time_filter": {
+            "hours_start": 0,
+            "hours_end": 23
+        },
+        "issue_types": [
+            "empty_shelf"
+        ],
+        "severity_threshold": "medium",
+        "fill_rate_threshold": 0.0,
+        "location_filter": "any"
+    },
+    "action": {
+        "alert_level": "warning",
+        "notification_message": "Atenção: A prateleira na zona {zone} está vazia."
+    },
+    "validation": {
+        "is_valid": true,
+        "ambiguities": [],
+        "assumptions": [
+            "Assumiu-se que a regra se aplica a qualquer zona ('any') e a qualquer altura da prateleira ('any') devido à falta de especificação.",
+            "Assumiu-se que 'vazia' corresponde a um limiar de preenchimento (fill_rate_threshold) de 0.0.",
+            "O nível de alerta foi definido como 'warning' por padrão.",
+            "A regra foi configurada para estar ativa durante todo o dia (0-23h)."
+        ]
+    }
+}

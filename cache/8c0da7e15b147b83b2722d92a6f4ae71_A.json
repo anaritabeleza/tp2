@@ -1,0 +1,23 @@
+{
+    "inspection_id": "INS_1780481551_8c0da7",
+    "timestamp": "2026-06-03T10:12:31Z",
+    "image_path": "data/images/planogram_violation_train_2359_jpg.rf.80f8fb72eea6a79502aa551bed5d1a1d.jpg",
+    "zone_id": "Z_PLA",
+    "overall_status": "warning",
+    "issues": [
+        {
+            "issue_id": "ISS_001",
+            "type": "wrong_product",
+            "location": "prateleira",
+            "severity": "medium",
+            "description": "Violação de planograma detetada: 39 produtos tombados de lado.",
+            "confidence": 0.85,
+            "affected_area_pct": 15.0
+        }
+    ],
+    "shelf_fill_rate": 85.0,
+    "products_detected": [
+        "retalho"
+    ],
+    "model_reasoning": "Zero-shot: Observado estado warning com fill rate 85.0%."
+}

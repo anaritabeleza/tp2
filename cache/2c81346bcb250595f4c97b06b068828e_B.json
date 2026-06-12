@@ -1,0 +1,23 @@
+{
+    "inspection_id": "INS_1779794062_2c8134",
+    "timestamp": "2026-05-26T11:14:22Z",
+    "image_path": "data/images/ambiguous_test_946_jpg.rf.250f9e46d8af287800582e1295054284.jpg",
+    "zone_id": "Z_AMB",
+    "overall_status": "warning",
+    "issues": [
+        {
+            "issue_id": "ISS_001",
+            "type": "other",
+            "location": "prateleira",
+            "severity": "medium",
+            "description": "Preenchimento de quota / fallback automático",
+            "confidence": 1.0,
+            "affected_area_pct": 15.0
+        }
+    ],
+    "shelf_fill_rate": 85.0,
+    "products_detected": [
+        "retalho"
+    ],
+    "model_reasoning": "CoT Visual: 1. Descrição: Prateleira de ambiguous. 2. Identificação: Preenchimento de quota / fallback automático. 3. Classificação: ambiguous. 4. Conclusão: Status warning."
+}
